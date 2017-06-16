@@ -1,0 +1,64 @@
+<!DOCTYPE html5>
+
+<meta name="viewport" content="width: 1000px, initial-scale=1.0">
+
+<link href="style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+
+<title>Planner</title>
+
+
+<header>
+    <div class="wrapper">
+        <span class="logo">Planner</span>
+        <input type="text" name="search-query" class="search">
+        <button type="sumbit"><i class="material-icons">search</i></button>        
+        <i class="material-icons">add</i>
+        <i class="material-icons">settings</i>
+        <i class="material-icons">exit_to_app</i>
+    </div>
+</header>
+
+<main>
+    <div class="wrapper">
+        <aside>       
+             <nav>
+                <a href=""><i class="material-icons">assignment</i>Сегодня</a>
+                <a href=""><i class="material-icons">event_note</i>На неделю</a>
+                <a href=""><i class="material-icons">done_all</i>Выполненные</a>
+                <a href=""><i class="material-icons">equalizer</i>Статистика</a>
+             </nav>
+             <nav>
+                <a href="">Работа</a>
+                <a href="">Семья</a>
+                <a href="">Дом</a>
+                <a href="">Фильмы</a>
+                <a href="">Покупки</a>
+             </nav>
+             <a href=""><i class="material-icons">add</i>Добавить запись</a>
+        </aside>
+        <section>
+            <div class="card">
+                <h1>Сегодня</h1> 
+                <time>пн, 12 июн</time>
+                <button><i class="material-icons">keyboard_arrow_down</i></button>
+                <ul>
+                    <li class="done">Погулять с собакой<time>в 9:00</time></li>
+                    <li>Сходить в спортзал<time>каждый день</time></li>
+                    <li>Закончить отчет<time>до 18:00</time></li>
+                </ul>
+                <button><i class="material-icons">add</i>Новая задача</button>
+            </div>
+            <div class="card">
+                <h1>Скоро</h1> 
+                <button><i class="material-icons">keyboard_arrow_down</i></button>
+                <ul>
+                    <li>Приготовить завтрак<time>до 10:00</time></li>
+                    <li>Встретиться с другом<time>16:00</time></li>
+                </ul>
+                <button><i class="material-icons">add</i>Новая задача</button>
+            </div>
+        </section>
+    </div>
+</main>
