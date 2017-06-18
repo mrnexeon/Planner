@@ -22,6 +22,7 @@ body {
 .right-col {
     width: 75%;
     float: left;
+    padding-left: 28px;
 }
 
 header {
@@ -31,7 +32,6 @@ header {
     height: 62px;
     overflow: hidden;
     white-space: nowrap;
-
 }
 
 header h1 {
@@ -100,6 +100,10 @@ main {
     margin-top: 28px;
 }
 
+aside {
+    min-width: 200px;
+}
+
 aside nav {
     padding: 16px 0;
     border-bottom: 1px solid #EDEDED;
@@ -148,4 +152,114 @@ nav ol li a i {
 
 .active a {
     color: #2873E3;
+}
+
+button[name="add-list"] {
+    color: rgba(0, 0, 0, .75);
+    white-space: nowrap;
+    font-size: 16px;
+    margin-top: 22px;
+    margin-left: 30px;
+}
+
+button[name="add-list"] i {
+    margin-right: 24px;
+    vertical-align: middle;
+}
+
+button[name="add-list"]:hover {
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+}
+
+section {
+    min-width: 630px;
+}
+
+.card {
+    position: relative;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .04);
+    background-color: white;
+    border: 1px solid #EDEDED;
+    border-radius: 8px;
+    padding: 28px 45px;
+    margin-bottom: 28px;
+}
+
+h2 {
+    font-size: 24px;
+    display: inline;
+    margin-right: 14px; 
+}
+
+time {
+    display: inline;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .25);
+}
+
+button[name="hide"] {
+    position: absolute;
+    right: 45px;
+    top: 28px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, .25);
+}
+
+button[name="hide"]:hover {
+    color: black;
+    cursor: pointer;
+}
+
+ul {
+    margin-top: 28px;
+}
+
+ul li {
+    position: relative;
+    height: 36px;
+    margin-bottom: 6px;
+    line-height: 36px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, .50);
+}
+
+ul li time {
+    position: absolute;
+    right: 0;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.done i {
+    color: #2873E3;
+}
+
+ul li i {
+    margin-right: 14px;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+}
+
+button[name="add-task"] {
+    margin-top: 28px;
+    white-space: nowrap;
+    color: #2873E3;
+    font-size: 16px;
+}
+
+button[name="add-task"]:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button[name="add-task"] i {
+    margin-right: 16px;
+    vertical-align: middle;
 }
