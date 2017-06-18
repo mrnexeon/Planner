@@ -3,62 +3,50 @@
 <meta name="viewport" content="width: 1000px, initial-scale=1.0">
 
 <link href="style.css" rel="stylesheet">
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
 
 <title>Planner</title>
 
 <header>
-    <div class="wrapper">
+    <div class="wrap">
         <div class="left-col">
-            <span class="logo">Planner</span>
+            <h1>Planner</h1>
         </div>
         
         <div class="right-col">
-            <input name="search" placeholder="Найти что-нибудь..">
-            <button name="search-btn"><i class="fa fa-search"></i></button>  
-
+            <div class="search-box">
+                <input name="search" placeholder="Найти что-нибудь..">
+                <i class="fa fa-search"></i>
+            </div>
             <button name="add-task"><i class="fa fa-plus"></i></button>
             <button name="notifications"><i class="fa fa-bell"></i></button>
-            <button name="settings"><i class="fa fa-cog"></i></button>
+            <button name="settings"><i class="fa fa-cog"></i></button>                    
             <button name="logout"><i class="fa fa-sign-out"></i></button>
         </div>
     </div>
 </header>
 
 <main>
-    <div class="wrapper">
-        <aside class="left-col">       
-            <ul>
-                <li class="active"><a href="#"><i class="fa fa-list"></i>Сегодня</a></li>
-                <li><a href="#"><i class="fa fa-calendar"></i>На неделю</a></li>
-                <li><a href="#"><i class="fa fa-check"></i>Выполненные</a></li>
-                <li><a href="#"><i class="fa fa-pie-chart"></i>Статистика</a></li>
-            </ul>
-
-            <a href=""><i class="fa fa-plus"></i>Добавить запись</a>
+    <div class="wrap">
+        <aside class="left-col"> 
+            <nav>
+                <ol> 
+                    <li class="active"><a href="#"><i class="fa fa-list"></i>Сегодня</a></li>
+                    <li><a href="#"><i class="fa fa-calendar"></i>На неделю</a></li>
+                    <li><a href="#"><i class="fa fa-check"></i>Выполненные</a></li>
+                    <li><a href="#"><i class="fa fa-pie-chart"></i>Статистика</a></li>
+                </ol>
+            </nav>
+            <nav>
+                <ol>
+                    <li><a href="#"><i class="fa fa-circle" style="color: #5798F8"></i>Работа</a></li>
+                    <li><a href="#"><i class="fa fa-circle" style="color: #5CD458"></i>Семья</a></li>
+                    <li><a href="#"><i class="fa fa-circle" style="color: #F96F59"></i>Дом</a></li>
+                    <li><a href="#"><i class="fa fa-circle" style="color: #7E7E7E"></i>Фильмы</a></li>
+                    <li><a href="#"><i class="fa fa-circle" style="color: #FFB300"></i>Покупки</a></li>
+                </ol>
+            </nav>
         </aside>
-
-        <section class="right-col">
-            <div class="card">
-                <h1>Сегодня</h1> 
-                <time>пн, 12 июн</time>
-                <button><i class="fa fa-chevron-down"></i></button>
-                <ul>
-                    <li class="done">Погулять с собакой<time>в 9:00</time></li>
-                    <li>Сходить в спортзал<time>каждый день</time></li>
-                    <li>Закончить отчет<time>до 18:00</time></li>
-                </ul>
-                <button><i class="fa fa-plus"></i>Новая задача</button>
-            </div>
-            <div class="card">
-                <h1>Скоро</h1> 
-                <button><i class="fa fa-chevron-down"></i></button>
-                <ul>
-                    <li>Приготовить завтрак<time>до 10:00</time></li>
-                    <li>Встретиться с другом<time>16:00</time></li>
-                </ul>
-            </div>
-        </section>
     </div>
 </main>

@@ -2,6 +2,16 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9F9F9;
+}
+
+.wrap {
+    margin: 0 auto;;
+    max-width: 908px;
 }
 
 .left-col {
@@ -11,22 +21,7 @@
 
 .right-col {
     width: 75%;
-    padding: 0 30px;
-}
-
-button {
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-button:focus {
-    outline: none;
-}
-
-.wrapper {
-    margin: 0 auto;
-    max-width: 1200px;
+    float: left;
 }
 
 header {
@@ -34,28 +29,34 @@ header {
     background-color: #2873E3;
     box-sizing: border-box;
     height: 62px;
-    padding-top: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+
 }
 
-header * {
-    vertical-align: middle;
-}
-
-header button {
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, .5);
-}
-
-header button:hover {
-    color: white;
-}
-
-.logo {
+header h1 {
+    display: inline-block;
     font-family: 'Lobster', cursive;
     text-shadow: 0 2px 0 rgba(0, 0, 0, .1);
     font-size: 26px;
     color: white;
     margin-left: 30px;
+    position: relative;
+    top: 16px;
+}
+
+header .search-box {
+    display: inline-block;
+    position: relative;
+    bottom: 3px;
+    margin-right: 23px; 
+}
+
+.search-box i {
+    color: rgba(255, 255, 255, .5);
+    position: absolute;
+    right: 10px;
+    bottom: 9px;
 }
 
 input[name="search"] {
@@ -81,30 +82,70 @@ input[name="search"]::-webkit-input-placeholder {
     color: rgba(255, 255, 255, .5);
 }
 
-button[name="search-btn"] {
-    position: relative;
-    right: 32px;
+header button {
+    display: inline-block;
+    height: 62px;
+    width: 62px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, .5);
+}
+
+header button:hover {
+    color: white;
+    background-color: #226CDB;
+    cursor: pointer;
 }
 
 main {
     margin-top: 28px;
 }
 
-aside ul li {
-    display: block;
-    height: 36px;
+aside nav {
+    padding: 16px 0;
+    border-bottom: 1px solid #EDEDED;
 }
 
-aside ul li a {
-    text-decoration: none;
+aside nav:first-child {
+    padding-top: 0;
+}
+
+nav ol li {
+    height: 36px;
+    margin-bottom: 10px;
+    padding-left: 30px; 
+    border-radius: 5px;
+}
+
+nav ol li:last-child {
+    margin-bottom: 0;
+}
+
+nav ol li:hover {
+    cursor: pointer;
+}
+
+nav ol li:not(.active):hover {
+    background-color: #F1F1F1;
+}
+
+nav ol li:not(.active):hover a {
+    color: black;
+}
+
+nav ol li a {
     color: rgba(0, 0, 0, .75);
+    line-height: 36px;
+    white-space: nowrap;
+}
+
+nav ol li a i {
+    margin-right: 24px;
 }
 
 .active {
-    color: #307EF2;
     background-color: white;
 }
 
-nav a i {
-    vertical-align: middle;
+.active a {
+    color: #2873E3;
 }
