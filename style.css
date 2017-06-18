@@ -285,6 +285,10 @@ button[name="add-task"] i {
     margin-right: 16px;
 }
 
+.add-task-form {
+    display: none;
+}
+
 input[name="task-text"] {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, .5);
