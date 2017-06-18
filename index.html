@@ -1,5 +1,6 @@
 <!DOCTYPE html5>
 
+<meta lang="ru" charset="utf-8">
 <meta name="viewport" content="width: 1000px, initial-scale=1.0">
 
 <link href="style.css" rel="stylesheet">
@@ -54,21 +55,33 @@
                 <h2>Сегодня</h2>
                 <time>пн, 12 июн</time>
                 <button name="hide"><i class="material-icons">keyboard_arrow_up</i></button>
-                <ul>
-                    <li class="done"><i class="material-icons">check_circle</i><span>Погулять с собакой</span><time>в 9:00</time></li>
-                    <li><i class="material-icons">radio_button_unchecked</i><span>Сходить в спортзал</span><time>каждый день</time></li>
-                    <li><i class="material-icons">radio_button_unchecked</i><span>Закончить отчет</span><time>в течение дня</time></li>
-                </ul>
-                <button name="add-task"><i class="material-icons">add</i><span>Добавить задачу</span></button>
+                <div class="card-content">
+                    <ul>
+                        <li class="done"><i class="material-icons">check_circle</i><span>Погулять с собакой</span><time>в 9:00</time></li>
+                        <li><i class="material-icons">radio_button_unchecked</i><span>Сходить в спортзал</span><time>каждый день</time></li>
+                        <li><i class="material-icons">radio_button_unchecked</i><span>Закончить отчет</span><time>в течение дня</time></li>
+                    </ul>
+                    <button name="add-task"><i class="material-icons">add</i><span>Добавить задачу</span></button>
+                    <div class="add-task-form">
+                        <input name="task-text">
+                        <button name="add">Добавить</button>
+                        <button name="cancel">Отменить</button>
+                    </div>
+                </div>
             </div>
             <div class="card">
                 <h2>Скоро</h2>
                 <button name="hide"><i class="material-icons">keyboard_arrow_up</i></button>
-                <ul>
-                    <li><i class="material-icons">radio_button_unchecked</i><span>Сходить в спортзал</span><time>вт, 13 июн</time></li>
-                    <li><i class="material-icons">radio_button_unchecked</i><span>Купить хлеб</span><time>вт, 13 июн</time></li>
-                </ul>
+                <div class="card-content">
+                    <ul>
+                        <li><i class="material-icons">radio_button_unchecked</i><span>Сходить в спортзал</span><time>вт, 13 июн</time></li>
+                        <li><i class="material-icons">radio_button_unchecked</i><span>Купить хлеб</span><time>вт, 13 июн</time></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </div>
 </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
