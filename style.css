@@ -48,7 +48,7 @@ header h1 {
 header .search-box {
     display: inline-block;
     position: relative;
-    bottom: 3px;
+    bottom: 8px;
     margin-right: 23px; 
 }
 
@@ -56,7 +56,7 @@ header .search-box {
     color: rgba(255, 255, 255, .5);
     position: absolute;
     right: 10px;
-    bottom: 9px;
+    bottom: 3px;
 }
 
 input[name="search"] {
@@ -67,15 +67,18 @@ input[name="search"] {
     background-color: rgba(255, 255, 255, .1);
     padding: 7px 36px 7px 16px;
     border-radius: 4px;
-    width: 360px;
+    width: 300px;
     height: 32px;
     border: none;
+
+    transition: width 0.5s, background-color 0.5s;
 }
 
 input[name="search"]:focus {
     background-color: rgba(255, 255, 255, .15);
     color: white;
     outline: none;
+    width: 360px;
 }
 
 input[name="search"]::-webkit-input-placeholder {
@@ -102,6 +105,7 @@ main {
 
 aside {
     min-width: 200px;
+    margin-bottom: 28px;
 }
 
 aside nav {
@@ -114,6 +118,7 @@ aside nav:first-child {
 }
 
 nav ol li {
+    display: block;
     height: 36px;
     margin-bottom: 10px;
     padding-left: 30px; 
@@ -137,9 +142,11 @@ nav ol li:not(.active):hover a {
 }
 
 nav ol li a {
+    display: flex;
+    align-items: center;
+    height: 36px;
     color: rgba(0, 0, 0, .75);
-    line-height: 36px;
-    white-space: nowrap;
+    text-shadow: 0 1px 1px white;
 }
 
 nav ol li a i {
@@ -218,20 +225,19 @@ ul {
 }
 
 ul li {
-    position: relative;
+    display: flex;
+    align-items: center;
     height: 36px;
     margin-bottom: 6px;
-    line-height: 36px;
     font-size: 18px;
     color: rgba(0, 0, 0, .50);
 }
 
 ul li time {
-    position: absolute;
-    right: 0;
+    margin-left: auto;
 }
 
-.done {
+.done > span {
     text-decoration: line-through;
 }
 

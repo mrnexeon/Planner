@@ -3,7 +3,7 @@
 <meta name="viewport" content="width: 1000px, initial-scale=1.0">
 
 <link href="style.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 
 <title>Planner</title>
@@ -17,12 +17,12 @@
         <div class="right-col">
             <div class="search-box">
                 <input name="search" placeholder="Найти что-нибудь..">
-                <i class="fa fa-search"></i>
+                <i class="material-icons">search</i>
             </div>
-            <button name="fast-add-task"><i class="fa fa-plus"></i></button>
-            <button name="notifications"><i class="fa fa-bell"></i></button>
-            <button name="settings"><i class="fa fa-cog"></i></button>                    
-            <button name="logout"><i class="fa fa-sign-out"></i></button>
+            <button name="fast-add-task"><i class="material-icons md-48">add</i></button>
+            <button name="notifications"><i class="material-icons">notifications</i></button>
+            <button name="settings"><i class="material-icons">settings</i></button>                    
+            <button name="logout"><i class="material-icons">exit_to_app</i></button>
         </div>
     </div>
 </header>
@@ -32,41 +32,41 @@
         <aside class="left-col"> 
             <nav>
                 <ol> 
-                    <li class="active"><a href="#"><i class="fa fa-list"></i>Сегодня</a></li>
-                    <li><a href="#"><i class="fa fa-calendar"></i>На неделю</a></li>
-                    <li><a href="#"><i class="fa fa-check"></i>Выполненные</a></li>
-                    <li><a href="#"><i class="fa fa-pie-chart"></i>Статистика</a></li>
+                    <li class="active"><a href="#"><i class="material-icons">assignment</i>Сегодня</a></li>
+                    <li><a href="#"><i class="material-icons">event_note</i><span>На неделю</span></a></li>
+                    <li><a href="#"><i class="material-icons">done</i>Выполненные</a></li>
+                    <li><a href="#"><i class="material-icons">equalizer</i>Статистика</a></li>
                 </ol>
             </nav>
             <nav>
                 <ol>
-                    <li><a href="#"><i class="fa fa-circle" style="color: #5798F8"></i>Работа</a></li>
-                    <li><a href="#"><i class="fa fa-circle" style="color: #5CD458"></i>Семья</a></li>
-                    <li><a href="#"><i class="fa fa-circle" style="color: #F96F59"></i>Дом</a></li>
-                    <li><a href="#"><i class="fa fa-circle" style="color: #7E7E7E"></i>Фильмы</a></li>
-                    <li><a href="#"><i class="fa fa-circle" style="color: #FFB300"></i>Покупки</a></li>
+                    <li><a href="#"><i class="material-icons" style="color: #5798F8">label</i>Работа</a></li>
+                    <li><a href="#"><i class="material-icons" style="color: #5CD458">label</i>Семья</a></li>
+                    <li><a href="#"><i class="material-icons" style="color: #F96F59">label</i>Дом</a></li>
+                    <li><a href="#"><i class="material-icons" style="color: #7E7E7E">label</i>Фильмы</a></li>
+                    <li><a href="#"><i class="material-icons" style="color: #FFB300">label</i>Покупки</a></li>
                 </ol>
             </nav>
-            <button name="add-list"><i class="fa fa-plus"></i>Добавить список</button>
+            <button name="add-list"><i class="material-icons">add</i>Добавить список</button>
         </aside>
         <section class="right-col">
             <div class="card">
                 <h2>Сегодня</h2>
                 <time>пн, 12 июн</time>
-                <button name="hide"><i class="fa fa-chevron-up"></i></button>
+                <button name="hide"><i class="material-icons">keyboard_arrow_up</i></button>
                 <ul>
-                    <li class="done"><i class="fa fa-check-circle"></i>Погулять с собакой<time>в 9:00</time></li>
-                    <li><i class="fa fa-circle-o"></i>Сходить в спортзал<time>каждый день</time></li>
-                    <li><i class="fa fa-circle-o"></i>Закончить отчет<time>в течение дня</time></li>
+                    <li class="done"><i class="material-icons">check_circle</i><span>Погулять с собакой</span><time>в 9:00</time></li>
+                    <li><i class="material-icons">radio_button_unchecked</i><span>Сходить в спортзал</span><time>каждый день</time></li>
+                    <li><i class="material-icons">radio_button_unchecked</i><span>Закончить отчет</span><time>в течение дня</time></li>
                 </ul>
-                <button name="add-task"><i class="fa fa-plus"></i>Добавить задачу</button>
+                <button name="add-task"><i class="material-icons">add</i>Добавить задачу</button>
             </div>
             <div class="card">
                 <h2>Скоро</h2>
-                <button name="hide"><i class="fa fa-chevron-up"></i></button>
+                <button name="hide"><i class="material-icons">keyboard_arrow_up</i></button>
                 <ul>
-                    <li><i class="fa fa-circle-o"></i>Сходить в спортзал<time>вт, 13 июн</time></li>
-                    <li><i class="fa fa-circle-o"></i>Купить хлеб<time>вт, 13 июн</time></li>
+                    <li><i class="material-icons">radio_button_unchecked</i><span>Сходить в спортзал</span><time>вт, 13 июн</time></li>
+                    <li><i class="material-icons">radio_button_unchecked</i><span>Купить хлеб</span><time>вт, 13 июн</time></li>
                 </ul>
             </div>
         </section>
