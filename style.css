@@ -10,17 +10,19 @@ body {
 }
 
 .wrap {
-    margin: 0 auto;;
+    box-sizing: content-box;
+    margin: 0 auto;
     max-width: 908px;
+    padding: 0 28px;
 }
 
 .left-col {
-    width: 25%;
+    width: 27%;
     float: left;
 }
 
 .right-col {
-    width: 75%;
+    width: 73%;
     float: left;
     padding-left: 28px;
 }
@@ -48,7 +50,7 @@ header h1 {
 header .search-box {
     display: inline-block;
     position: relative;
-    bottom: 3px;
+    bottom: 8px;
     margin-right: 23px; 
 }
 
@@ -56,7 +58,7 @@ header .search-box {
     color: rgba(255, 255, 255, .5);
     position: absolute;
     right: 10px;
-    bottom: 9px;
+    bottom: 3px;
 }
 
 input[name="search"] {
@@ -67,15 +69,18 @@ input[name="search"] {
     background-color: rgba(255, 255, 255, .1);
     padding: 7px 36px 7px 16px;
     border-radius: 4px;
-    width: 360px;
+    width: 300px;
     height: 32px;
     border: none;
+
+    transition: width 0.5s, background-color 0.5s;
 }
 
 input[name="search"]:focus {
     background-color: rgba(255, 255, 255, .15);
     color: white;
     outline: none;
+    width: 360px;
 }
 
 input[name="search"]::-webkit-input-placeholder {
@@ -91,7 +96,7 @@ header button {
 }
 
 header button:hover {
-    color: white;
+    color: rgba(255, 255, 255, .95);
     background-color: #226CDB;
     cursor: pointer;
 }
@@ -102,6 +107,7 @@ main {
 
 aside {
     min-width: 200px;
+    margin-bottom: 28px;
 }
 
 aside nav {
@@ -114,6 +120,7 @@ aside nav:first-child {
 }
 
 nav ol li {
+    display: block;
     height: 36px;
     margin-bottom: 10px;
     padding-left: 30px; 
@@ -137,9 +144,11 @@ nav ol li:not(.active):hover a {
 }
 
 nav ol li a {
+    display: flex;
+    align-items: center;
+    height: 36px;
     color: rgba(0, 0, 0, .75);
-    line-height: 36px;
-    white-space: nowrap;
+    text-shadow: 1px 1px 1px white;
 }
 
 nav ol li a i {
@@ -155,6 +164,8 @@ nav ol li a i {
 }
 
 button[name="add-list"] {
+    display: flex;
+    align-items: center;
     color: rgba(0, 0, 0, .75);
     white-space: nowrap;
     font-size: 16px;
@@ -163,12 +174,14 @@ button[name="add-list"] {
 }
 
 button[name="add-list"] i {
-    margin-right: 24px;
-    vertical-align: middle;
+    margin-right: 16px;
+}
+
+button[name="add-list"]:hover span {
+    text-decoration: underline;
 }
 
 button[name="add-list"]:hover {
-    text-decoration: underline;
     color: black;
     cursor: pointer;
 }
@@ -194,9 +207,9 @@ h2 {
 }
 
 time {
-    display: inline;
     font-size: 14px;
     font-weight: 500;
+    text-align: right;
     color: rgba(0, 0, 0, .25);
 }
 
@@ -206,6 +219,11 @@ button[name="hide"] {
     top: 28px;
     font-size: 18px;
     color: rgba(0, 0, 0, .25);
+    transition: transform .3s ease-out;
+}
+
+button[name="hide"].hidden {
+    transform: rotate(180deg);
 }
 
 button[name="hide"]:hover {
@@ -218,20 +236,19 @@ ul {
 }
 
 ul li {
-    position: relative;
+    display: flex;
+    align-items: center;
     height: 36px;
     margin-bottom: 6px;
-    line-height: 36px;
     font-size: 18px;
-    color: rgba(0, 0, 0, .50);
+    color: rgba(0, 0, 0, .5);
 }
 
 ul li time {
-    position: absolute;
-    right: 0;
+    margin-left: auto;
 }
 
-.done {
+.done > span {
     text-decoration: line-through;
 }
 
@@ -248,18 +265,73 @@ ul li:last-child {
 }
 
 button[name="add-task"] {
+    display: flex;
+    align-items: center;
     margin-top: 28px;
     white-space: nowrap;
     color: #2873E3;
     font-size: 16px;
 }
 
-button[name="add-task"]:hover {
+button[name="add-task"]:hover span {
     text-decoration: underline;
+}
+
+button[name="add-task"]:hover {
     cursor: pointer;
 }
 
 button[name="add-task"] i {
     margin-right: 16px;
-    vertical-align: middle;
+}
+
+input[name="task-text"] {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 32px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, .5);
+    margin: 28px 0;
+
+    transition: color .3s, border-bottom .3s;
+}
+
+input[name="task-text"]:focus {
+    outline: none;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+button[name="add"] {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15);
+    background-color: #3F88F5;
+    border-radius: 4px;
+    padding: 10px 24px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color .2s;
+}
+
+button[name="add"]:hover {
+    background-color: #5798F8;
+    cursor: pointer;
+}
+
+button[name="cancel"] {
+    margin-left: 14px;
+    color: rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color .2s;
+}
+
+button[name="cancel"]:hover {
+    background-color: #EDEDED;
+    cursor: pointer;
 }
