@@ -196,7 +196,7 @@ section {
     background-color: white;
     border: 1px solid #EDEDED;
     border-radius: 8px;
-    padding: 28px 45px;
+    padding: 28px 36px;
     margin-bottom: 28px;
 }
 
@@ -238,17 +238,58 @@ ul {
 ul li {
     display: flex;
     align-items: center;
-    height: 36px;
-    margin-bottom: 6px;
+    padding: 12px;
     font-size: 18px;
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .6);
+    border-bottom: 1px solid #EDEDED;
+    transition: color .2s;
+}
+
+ul li:last-child {
+    border: none;
+}
+
+ul li > i:first-child {
+    margin-right: 14px;
+    transition: color .3s;
+}
+
+ul li > i:first-child:hover {
+    color: #2873E3;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    cursor: text;
+}
+
+
+
+ul li button {
+    display: none;
+    margin-left: 14px;
+    color: rgba(0, 0, 0, .25);
+    transition: color .2s;
+}
+
+ul li button i {
+    font-size: 18px !important;
+}
+
+ul li:hover button {
+    display: block;
+}
+
+ul li:hover button:hover {
+    color: rgba(0, 0, 0, .75);
+    cursor: pointer;
 }
 
 ul li time {
     margin-left: auto;
 }
 
-.done > span {
+.done span {
     text-decoration: line-through;
 }
 
@@ -256,9 +297,6 @@ ul li time {
     color: #2873E3;
 }
 
-ul li i {
-    margin-right: 14px;
-}
 
 ul li:last-child {
     margin-bottom: 0;
@@ -285,26 +323,17 @@ button[name="add-task"] i {
     margin-right: 16px;
 }
 
-.add-task-form {
-    display: none;
-}
-
 input[name="task-text"] {
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .5);
-    width: 100%;
-    height: 32px;
+    width: 70%;
     font-size: 18px;
     color: rgba(0, 0, 0, .5);
-    margin: 28px 0;
-
-    transition: color .3s, border-bottom .3s;
+    transition: color .3s;
 }
 
 input[name="task-text"]:focus {
     outline: none;
     color: black;
-    border-bottom: 1px solid black;
 }
 
 button[name="add"] {
